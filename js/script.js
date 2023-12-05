@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            
             userNewToDo:'',
 
             toDoList: [
@@ -44,7 +45,8 @@ createApp({
         },
 
         addElement(){
-            this.toDoList.push(userNewToDo)
+            this.userNewToDo='';
+            this.toDoList.push({text: userNewToDo, done:false});
         }
         }
         }

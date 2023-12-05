@@ -22,13 +22,13 @@
         </header>
         <main>
            <div class="taskbar">
-            <button @click="addElement">Add event</button>
-                <input type="text" v-model="userNewToDo" @keyup.enter="addNewTodoItem(newTodoElement)" class="my-taskbar" id="userAddtoDo" name="userAddtoDo" >
+            <button >Add event</button>
+                <input type="text" v-model="userNewToDo" @keyup.enter="addElement(userNewToDo)" class="my-taskbar" id="userAddtoDo" name="userAddtoDo" >
            </div>
            <ul class="list">
                 <li class="list-item" v-for="(element,index) in toDoList" >
                     <p >{{element.text}}</p>
-                    <i class="fa-solid fa-xmark" @click="removeElement" style="color: #ff0000;"></i>
+                    <i class="fa-solid fa-xmark" @click="removeElement(index)" style="color: #ff0000;"></i>
                 </li>
                 
            </ul>
