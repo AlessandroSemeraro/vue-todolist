@@ -52,3 +52,7 @@ input.my-taskbar{
     border-radius: 5px;
     border: 1px solid rgb(0, 0, 0);
 }
+
+li.list-item p.line-trough {
+    text-decoration: line-through;
+}

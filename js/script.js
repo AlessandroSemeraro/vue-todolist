@@ -36,17 +36,22 @@ createApp({
             }
         },
     methods: {
-        alreadyDone(elementDone){
-            elementDone.done = false
-        },
 
         removeElement(index){
             this.toDoList.splice(index,1)
         },
 
-        addElement(){
+        stringBeautifier(rawString){
+            rawString = rawString.trim().toLowerCase();
+            return rawString.charAt(0).toUpperCase() + rawString.slice(1);
+        },
+
+        addElement(newElement){
+            let newElementUser = this.stringBeautifier(newElement);
             this.userNewToDo='';
-            this.toDoList.push({text: userNewToDo, done:false});
+            newObject={text: newElementUser, done:false};
+            this.toDoList.push(newObject);
+            
         }
         }
         }
